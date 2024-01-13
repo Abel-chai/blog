@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Gitalk</title>
+      <link href="/2024/01/13/Gitalk/"/>
+      <url>/2024/01/13/Gitalk/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Gitalk"><a href="#Gitalk" class="headerlink" title="Gitalk"></a>Gitalk</h2><p>Gitalk 是一个基于 Github Issue 和 Preact 开发的评论插件。详情请访问官网 <a href="https://github.com/gitalk/gitalk">Gitalk</a></p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><hr><ul><li>npm 安装</li></ul><pre><code>npm i gitalk  --save </code></pre><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><hr><ol><li>需要选择一个公共 github 存储库用于存储评论；然后创建 <a href="https://github.com/settings/applications/new">Github Application</a>，并填写相关信息</li><li>应用到页面上</li></ol><pre><code class="vue">&lt;template&gt;    &lt;div id=&quot;gitalk-container&quot;&gt;&lt;/div&gt;&lt;/template&gt;&lt;script&gt;   import &#39;gitalk/dist/gitalk.css&#39;   import Gitalk from &#39;gitalk&#39;            var gitalk = new Gitalk(&#123;          clientID: &#39;GitHub Application Client ID&#39;,          clientSecret: &#39;GitHub Application Client Secret&#39;,          repo: &#39;GitHub repo&#39;,          owner: &#39;GitHub repo owner&#39;,          admin: [&#39;GitHub repo owner and collaborators&#39;],          id: location.pathname,  // Ensure uniqueness and length less than 50          distractionFreeMode: false  // Facebook-like distraction free mode    &#125;)    gitalk.render(&#39;gitalk-container&#39;)&lt;/script&gt;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发小工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 插件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2024/01/11/hello-world/"/>
       <url>/2024/01/11/hello-world/</url>
