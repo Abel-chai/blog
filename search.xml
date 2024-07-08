@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>linux常用命令</title>
+      <link href="/2024/07/08/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+      <url>/2024/07/08/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<h2 id="linux常用命令"><a href="#linux常用命令" class="headerlink" title="linux常用命令"></a>linux常用命令</h2><p>显示磁盘使用情况</p><pre><code class="shell">df -h  # 显示磁盘空间使用情况du -h --max_depth=1  # 显示当前目录的磁盘使用情况</code></pre><p>查看指定端口的进程信息</p><pre><code class="sh">lsof -i 8888</code></pre><p>指定显卡用于后台执行程序</p><pre><code class="sh">CUDA_VISIBLE_DEVICES=0 nohup python demo.py &gt; out.log 2&gt;&amp;1 &amp;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 小技巧 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>shell批量下载文件</title>
       <link href="/2024/07/07/shell%E6%89%B9%E9%87%8F%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/"/>
       <url>/2024/07/07/shell%E6%89%B9%E9%87%8F%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/</url>
