@@ -33,7 +33,7 @@
       <link href="/2024/07/07/shell%E6%89%B9%E9%87%8F%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/"/>
       <url>/2024/07/07/shell%E6%89%B9%E9%87%8F%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/</url>
       
-        <content type="html"><![CDATA[<h2 id="shell-批量下载文件"><a href="#shell-批量下载文件" class="headerlink" title="shell 批量下载文件"></a>shell 批量下载文件</h2><p>使用 shell 脚本可以批量下载文件(以 wget 命令为例)</p><pre><code class="shell">#!/bin/bash# 文件数组files=(&quot;https://example.com/1.txt&quot; &quot;https://example.com/1.txt&quot;)# 下载目录download_dir=&quot;/download/&quot;for url in &quot;$&#123;files[@]&#125;&quot;do  # 提取文件名  filename=$(basename &quot;$url&quot;)    # 下载文件  echo &quot;正在下载文件: $filename&quot;  wget -q url -o &quot;$download_dir&quot; --progress=bar:force    # 检查是否下载成功  if [ $? -eq 0 ]   then    echo &quot;$filename 下载成功&quot;  else    echo &quot;$filename 下载失败&quot;  fidone</code></pre>]]></content>
+        <content type="html"><![CDATA[<h2 id="shell-批量下载文件"><a href="#shell-批量下载文件" class="headerlink" title="shell 批量下载文件"></a>shell 批量下载文件</h2><p>使用 shell 脚本可以批量下载文件(以 wget 命令为例)</p><pre><code class="shell">#!/bin/bash# 文件数组files=(&quot;https://example.com/1.txt&quot; &quot;https://example.com/1.txt&quot;)# 下载目录download_dir=&quot;/download/&quot;for url in &quot;$&#123;files[@]&#125;&quot;do  # 提取文件名  filename=$(basename &quot;$url&quot;)    # 下载文件  echo &quot;正在下载文件: $filename&quot;  wget url -o &quot;$download_dir&quot; --progress=bar:force    # 检查是否下载成功  if [ $? -eq 0 ]   then    echo &quot;$filename 下载成功&quot;  else    echo &quot;$filename 下载失败&quot;  fidone</code></pre>]]></content>
       
       
       <categories>
