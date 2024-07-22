@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>参数解析器</title>
+      <link href="/2024/07/22/%E5%8F%82%E6%95%B0%E8%A7%A3%E6%9E%90%E5%99%A8/"/>
+      <url>/2024/07/22/%E5%8F%82%E6%95%B0%E8%A7%A3%E6%9E%90%E5%99%A8/</url>
+      
+        <content type="html"><![CDATA[<h2 id="参数解析器"><a href="#参数解析器" class="headerlink" title="参数解析器"></a>参数解析器</h2><p>在运行python程序的时候，往往需要在命令之后传入参数</p><h4 id="依赖导入"><a href="#依赖导入" class="headerlink" title="依赖导入"></a>依赖导入</h4><pre><code class="python">import argparse</code></pre><h4 id="实例化参数解析器"><a href="#实例化参数解析器" class="headerlink" title="实例化参数解析器"></a>实例化参数解析器</h4><pre><code class="python">parser = argparse.ArgumentParser()</code></pre><p>常用参数</p><ul><li><code>description</code>：帮助文档描述(头部)</li><li><code>epilog</code>：帮助文档描述(尾部)</li><li><code>add_help</code>：添加<code>-h / --help</code>选项来显示帮助文档，默认值为<code>True</code></li></ul><h4 id="添加参数设置"><a href="#添加参数设置" class="headerlink" title="添加参数设置"></a>添加参数设置</h4><p>添加一个<code>-v</code>或<code>--version</code>来传入参数</p><pre><code class="python">parser.add_argument(&#39;-v&#39;, &#39;--version&#39;)</code></pre><p>常用参数</p><ul><li><p><code>type</code>：命令行参数被转换成的类型，如<code>str</code>、<code>int</code>、<code>float</code>等</p></li><li><p><code>default</code>：默认值设置</p></li><li><p><code>help</code>：对于此参数的描述会被打印至帮助文档中</p></li><li><p><code>action</code>：指定该参数的动作</p><ul><li><pre><code class="python"># 携带 -v 时该值设置为True, 默认为Falseparser.add_argument(&#39;-v&#39;, action=&#39;store_true&#39;)# 与上述相反parser.add_argument(&#39;-v&#39;, action=&#39;store_false&#39;)</code></pre></li></ul></li><li><p><code>required</code>：表示参数是否必须传入，默认值为<code>False</code></p></li></ul><h4 id="解析获取的参数"><a href="#解析获取的参数" class="headerlink" title="解析获取的参数"></a>解析获取的参数</h4><pre><code class="python">args = parser.parse_args()</code></pre><hr><h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><pre><code class="python">import argparseparas = argparse.ArgumentParser(description=&#39;Test&#39;, epilog=&#39;By Abel&#39;)paras.add_argument(&#39;--input_path&#39;, default=&#39;./input&#39;, type=str, help=&#39;输入路径&#39;)paras.add_argument(&#39;--output_path&#39;, default=&#39;./output&#39;, type=str, help=&#39;输出路径&#39;)args = paras.parse_args()print(&#39;input path:&#39;, args.input_path)print(&#39;output path:&#39;, args.output_path)# 输出&gt; python test.py -husage: test.py [-h] [--input_path INPUT_PATH] [--output_path OUTPUT_PATH]Testoptions:  -h, --help            show this help message and exit  --input_path INPUT_PATH                        输入路径  --output_path OUTPUT_PATH                        输出路径By Abel&gt; python test.pyinput path: ./inputoutput path: ./output</code></pre><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 实用工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>linux常用命令</title>
       <link href="/2024/07/08/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
       <url>/2024/07/08/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
