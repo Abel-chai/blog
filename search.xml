@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>docker常用命令</title>
+      <link href="/2024/07/23/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+      <url>/2024/07/23/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<h2 id="docker常用命令"><a href="#docker常用命令" class="headerlink" title="docker常用命令"></a>docker常用命令</h2><p>显示当前正在运行的<code>docker</code>容器</p><pre><code class="shell">docker ps  # -a / --all: 显示所有容器</code></pre><p>显示本地主机上的镜像</p><pre><code class="shell">docker images</code></pre><p>开启指定容器的交互式终端</p><pre><code class="shell">docker exec -it 容器id /bin/bash</code></pre><p>获取容器长<code>ID</code></p><pre><code>docker inspect -f &#39;&#123;&#123;.ID&#125;&#125;&#39; 容器名</code></pre><p>拷贝主机文件到容器中</p><pre><code>docker ps 主机文件路径 容器长ID:docker容器路径</code></pre><p>拷贝容器文件到主机中</p><pre><code>docker ps 容器长ID:docker容器路径 主机文件路径 </code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> docker </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 小技巧 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>基于Dockerfile创建镜像</title>
       <link href="/2024/07/23/%E5%9F%BA%E4%BA%8EDockerfile%E5%88%9B%E5%BB%BA%E9%95%9C%E5%83%8F/"/>
       <url>/2024/07/23/%E5%9F%BA%E4%BA%8EDockerfile%E5%88%9B%E5%BB%BA%E9%95%9C%E5%83%8F/</url>
